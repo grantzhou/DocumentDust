@@ -1,7 +1,7 @@
 name: ivorysql-doc
 title: IvorySQL
 version: 2.1
-start_page: inline-text-formatting.adoc
+start_page: welcome.adoc
 asciidoc:
   attributes:
     source-language: asciidoc@
