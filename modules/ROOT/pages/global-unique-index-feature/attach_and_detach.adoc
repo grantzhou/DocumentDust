@@ -1,13 +1,13 @@
 = Attach and Detach
 
 
-## Global Uniqueness Guarantee with Attach
+== Global Uniqueness Guarantee with Attach
 
 When attaching a new table to a partitioned table with global unique index, system will parform a duplicate check on all existing partitions. If there is a duplicate found in existing partitions that match a tuple in the attached table, an error will be raised and attach will fail.
 
 The attach requires a shared lock on all existing partitions. If there is a concurrent INSERT in progress on one of the partitions, the attach will wait for it to finish first. This can be improved in future releases
 
-## Example
+== Example
 [source,sql]
 -----------------
 create table gidxpart (a int, b int, c text) partition by range (a);
@@ -18,7 +18,9 @@ create table gidxpart2 (a int, b int, c text);
 insert into gidxpart2 (a, b, c) values (150000, 572814, 'dup inserted on gidxpart2');
 alter table gidxpart attach partition gidxpart2 for values from (100000) to (199999); 
 -----------------
+
 === Output
+[source,console]
 -----------------
 ERROR:  could not create unique index "gidxpart1_b_idx"
 DETAIL:  Key (b)=(572814) is duplicated.
