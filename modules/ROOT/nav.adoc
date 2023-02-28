@@ -1,0 +1,4 @@
+* xref:welcome.adoc[]
+* Lists
+** xref:lists/compatibility-features.adoc[]
+** xref:lists/global-unique-index.adoc[]
