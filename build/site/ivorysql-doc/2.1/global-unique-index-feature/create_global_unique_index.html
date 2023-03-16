@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Create Global Unique Index :: IvorySQL Document Site</title>
+    <link rel="canonical" href="https://docs.ivorysql.org/ivorysql-doc/2.1/global-unique-index-feature/create_global_unique_index.html">
+    <link rel="prev" href="../compatibility-features-lists/escape-character.html">
+    <link rel="next" href="attach_and_detach.html">
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.ivorysql.org">IvorySQL Document Site</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="docs.ivorysql.org">IvorySQL</a>
+            <a class="navbar-item" href="docs.ivorysql.org">Migrations</a>
+            <a class="navbar-item" href="docs.ivorysql.org">AdminUI</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Migration Services</a>
+            <a class="navbar-item" href="#">Remote DBA</a>
+            <a class="navbar-item" href="#">Perfornace Tuning</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="ivorysql-doc" data-version="2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../welcome.html">IvorySQL</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../welcome.html">Welcome to IvorySQL</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Compatibility Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../compatibility-features-lists/parameter_settings.html">Compatibility Parameters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../compatibility-features-lists/package.html">Packages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../compatibility-features-lists/alter_table.html">Alter Table</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../compatibility-features-lists/delete_table.html">Delete table</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../compatibility-features-lists/update_table.html">Update Table</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#compatibility-features-lists/groupby.adoc">compatibility-features-lists/groupby.adoc</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../compatibility-features-lists/union.html">Union Operator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../compatibility-features-lists/minus.html">MINUS Operator</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../compatibility-features-lists/escape-character.html">Escape Characters</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Global Unique Index</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="create_global_unique_index.html">Create Global Unique Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="attach_and_detach.html">Attach and Detach</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="insert_and_update.html">Insert and Update</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">IvorySQL</span>
+    <span class="version">2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../welcome.html">IvorySQL</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../welcome.html">2.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../welcome.html">IvorySQL</a></li>
+    <li>Global Unique Index</li>
+    <li><a href="create_global_unique_index.html">Create Global Unique Index</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/DutMsn/Document/edit/main/modules/ROOT/pages/global-unique-index-feature/create_global_unique_index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Create Global Unique Index</h1>
+<div class="sect1">
+<h2 id="overview"><a class="anchor" href="#overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Support of global unique index creation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="syntax"><a class="anchor" href="#syntax"></a>syntax</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE UNIQUE INDEX [IF NOT EXISTS] name ON table_name [USING method] (columns) GLOBAL</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="example"><a class="anchor" href="#example"></a>Example</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE UNIQUE INDEX myglobalindex on mytable(bid) GLOBAL;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="global-uniqueness-guarantee"><a class="anchor" href="#global-uniqueness-guarantee"></a>Global Uniqueness Guarantee</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During global unique index creation, the system performs a index scan on all existing partitions and will raise an error if it finds a duplicate from other partitions instead of current. For example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">create table gidxpart (a int, b int, c text) partition by range (a);
+create table gidxpart1 partition of gidxpart for values from (0) to (100000);
+create table gidxpart2 partition of gidxpart for values from (100000) to (199999);
+insert into gidxpart (a, b, c) values (42, 572814, 'inserted first on gidxpart1');
+insert into gidxpart (a, b, c) values (150000, 572814, 'inserted second on gidxpart2');
+create unique index on gidxpart (b) global;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="output"><a class="anchor" href="#output"></a>Output</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>ERROR:  could not create unique index "gidxpart1_b_idx"
+DETAIL:  Key (b)=(572814) is duplicated.</pre>
+</div>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../compatibility-features-lists/escape-character.html">Escape Characters</a></span>
+  <span class="next"><a href="attach_and_detach.html">Attach and Detach</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
